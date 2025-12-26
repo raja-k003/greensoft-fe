@@ -1,0 +1,58 @@
+// @import '../../variables.scss';
+// .toast {
+//     max-width: 100% !important;
+//     text-align: center;
+//     text-align: center;
+//     border-bottom-right-radius: 15px;
+//     border-bottom-left-radius: 15px;
+//     box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.2);
+//     font-size: ptToPx(18) !important;
+// }
+
+// :host ::ng-deep .toast-body {
+//     padding: ptToPx(10) !important;
+// }
+
+// .bg-danger {
+//     background-color: $toaster-danger !important;
+// }
+
+// .bg-success {
+//     background-color: $toaster-success !important;
+// }
+// .toastertext{
+//     padding-left: 8px !important;
+// }
+// .toast-close,
+// .toast-close:focus{
+//     background-color: initial !important;
+//     outline:none !important;
+//     border:none !important;
+// }
+// .toast-close img{
+//     width:ptToPx(20) !important;
+//     height:ptToPx(20) !important;
+// }
+// .toaster-img{
+//     width:ptToPx(26) !important;
+// }
+// .toast {
+//     position: fixed;
+//     right: 0;
+//     width: 300px;
+//     z-index: 1099;
+//     margin-top: 0.2rem;
+//     border: 1px solid transparent;
+//     border-radius: .25rem;
+//     animation: move 1s both;
+//     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+//   }
+  
+//   @keyframes move {
+//     from {
+//       transform: translateX(100%);
+//     }
+//     to {
+//       transform: translateX(0);
+//     }
+// }

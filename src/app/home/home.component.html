@@ -1,0 +1,77 @@
+<div class="carousel-header">
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner home_space" role="listbox">
+            <ngb-carousel [showNavigationArrows]="true" [interval]="5000">
+            <ng-template ngbSlide *ngFor="let item of carousel">
+            <div class="carousel-item active">
+                <img [src]="item.url" class="img-fluid" alt="Image">
+                <div class="carousel-caption-1">
+                    <div class="carousel-caption-1-content" >
+                        <h4 class="text-white text-uppercase fw-bold home-content">{{item?.subHeading || ""}}</h4>
+                        <h3 class="display-2 text-capitalize text-white home-content">{{item.heading}}</h3>
+                        <p class="mb-5 fs-5 text-white home-content">{{item.content}}</p>
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <div class="row justify-content-end">
+                            <a class="col-md-4 col-sm-12 btn-primary rounded-pill btns mb-2" routerLink="/test-water-quality">Calculate Water Softening Chemistry</a>
+                            <a class="col-md-2 col-sm-12 btn-secondary rounded-pill btns mb-2" routerLink="/product">Our Products</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+        </div>
+    </div>
+</div>
+
+  <div class="container-fluid feature p-0">
+    <div class="discovered">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <div class="text-primary header-sec">We've you got you covered</div>
+            <h1 class="display-3 text-capitalize mb-3">your trusted partner in safe drinking water!</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-6 col-xl-4  fadeInUp">
+                <div class="product-item">
+                    <img src="assets/common/logo.png" class="product-img logo"  alt="Image">
+                    <div class="product-content p-4">
+                        
+                        <a  class="h4 d-inline-block mb-3 product-caption text-center">Green Soft</a>
+                        <p>
+                            Green Soft is a trusted name in industrial water purification, delivering reliable and innovative treatment solutions for over 10 years. With a strong commitment to quality and performance, we help industries achieve safe, efficient, and sustainable water management. Our expertise covers advanced purification technologies, customized system design, and long-term operational support.
+                        <!-- <a  class="btn btn-secondary rounded-pill py-2 px-4" routerLink="/about-us">Read More</a> -->
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-6 col-xl-4  fadeInUp">
+                <div class="product-item">
+                    <img src="assets/bg/servicecard.jpg" class="product-img"  alt="Image">
+                    <div class="product-content p-4">
+                        <a  class="h4 d-inline-block mb-3 product-caption">Our Service</a>
+                        <p>
+                       Our service team ensures uninterrupted performance with timely maintenance and expert support. From filter replacements to complete system checks, we provide reliable, fast, and hassle-free service for all types of setups. Our trained technicians use genuine parts and follow strict quality protocols. we guarantee smooth operation and complete peace of mind. </p>
+                        <!-- <a class="btn btn-secondary rounded-pill py-2 px-4" routerLink="/service">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4  fadeInUp">
+                <div class="product-item">
+                    <img src="assets/other/our-products.jpeg" class="product-img"  alt="Image">
+                    <div class="product-content p-4">
+                        <a href="#" class="h4 d-inline-block mb-3 product-caption">Our Products</a>
+                        <p>
+                        Our water purifiers are engineered with advanced filtration technology and heavy-duty components, they deliver consistently pure water for manufacturing and large-scale facilities. Each system is designed for long operational life, low maintenance, and energy-efficient performance. With customizable capacities and robust automation.</p>
+                        <!-- <a class="btn btn-secondary rounded-pill py-2 px-4" routerLink="/product" >Read More</a> -->
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<app-common-content  [content]="'BENEFITS'"></app-common-content>
+<app-common-content  [content]="'FEATURES'"></app-common-content>
+<app-common-content  [content]="'CLIENTS'"></app-common-content>
+<app-common-content  [content]="'REVIEW'"></app-common-content>
+<app-common-content  [content]="'PROJECTS'"></app-common-content>
+<app-common-content  [content]="'BLOG'"></app-common-content>

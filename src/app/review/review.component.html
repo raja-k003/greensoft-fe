@@ -1,0 +1,38 @@
+
+
+<section class="reviews-section">
+<h3 class="title">4.9 star Based on 404 reviews</h3>
+
+
+<div #scrollContainer class="scroll-container">
+<div class="review-card" *ngFor="let r of reviews">
+<img [src]="r.image" alt="avatar" class="avatar" loading="lazy" />
+<div class="review-info">
+<div class="top-row">
+<h4 class="name">{{ r.name }}</h4>
+<div class="stars" aria-hidden>
+<ng-container *ngFor="let s of getStarsArray(r.rating)">★</ng-container>
+</div>
+</div>
+
+
+<p class="text">{{ r.text }}</p>
+</div>
+</div>
+</div>
+<div #scrollContainer1 class="scroll-container1">
+<div class="review-card" *ngFor="let r of reviews">
+<img [src]="r.image" alt="avatar" class="avatar" loading="lazy" />
+<div class="review-info">
+<div class="top-row">
+<h4 class="name">{{ r.name }}</h4>
+<div class="stars" aria-hidden>
+<ng-container *ngFor="let s of getStarsArray(r.rating)">★</ng-container>
+</div>
+</div>
+<p class="text">{{ r.text }}</p>
+</div>
+</div>
+</div>
+</section>
+

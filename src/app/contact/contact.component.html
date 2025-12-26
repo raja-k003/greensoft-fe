@@ -1,0 +1,119 @@
+<div class="col-12 contact-bg">
+    <!-- <h4 class="text-white display-4 mb-4 contact-text">Contact Us</h4>
+    <img src="assets/common/contactus_1.jpg" alt="" class="w-100"> -->
+</div>
+
+<div class="container-fluid contact bg-light py-2">
+    <div class="container py-3 top_space top_space_mobile_contact">
+        <div class="row">
+            <div class="col-lg-6 h-100 wow fadeInUp contact-bg" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
+                    <h4 class="text-uppercase text-primary connect">Let’s Connect</h4>
+                    <h1 class="display-3 text-capitalize mb-3 message">Send Your Message</h1>
+                    <p class="mb-0 text-para">We’re here to help you find the right solution for your industry.
+Send us your message, and our team will get back to you with expert guidance and personalized support.
+Let’s work together to create a cleaner, more efficient, and sustainable water system for your facility.</p>
+                </div>
+                <form [formGroup]="form">
+                    <div class="row g-4">
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0" id="firstname" formControlName="firstName" placeholder="Your Name">
+                                <p *ngIf="isSubmitted && getControl('firstName').invalid" class="text-danger mt-2">this field is mandatory</p>
+                                <label for="firstname">First Name</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0" id="lastname" formControlName="lastName" placeholder="Your Name">
+                                <label for="lastname">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control border-0" id="email" formControlName="emailId" placeholder="Your Email">
+                                <p *ngIf="isSubmitted && getControl('emailId').hasError('required')" class="text-danger mt-2">this field is mandatory</p>
+                                <p *ngIf="isSubmitted && getControl('emailId').hasError('pattern')" class="text-danger mt-2">Invalid phone No</p>
+                                <label for="email">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="phone" class="form-control border-0" id="phone" placeholder="Phone" formControlName="contactNo">
+                                <p *ngIf="isSubmitted && getControl('contactNo').hasError('required')" class="text-danger mt-2">this field is mandatory</p>
+                                <p *ngIf="isSubmitted && getControl('contactNo').hasError('pattern')" class="text-danger mt-2">Invalid phone No</p>
+
+                                <label for="phone">Your Phone</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0" id="subject" formControlName="address" placeholder="Address">
+                                <p *ngIf="isSubmitted && getControl('address').invalid" class="text-danger mt-2">this field is mandatory</p>
+                                <label for="address">Address</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-12">
+                            <div class="form-floating">
+                            <select class="form-control border-0 form-input select" formControlName="enquiryType">
+                                <option value="GENERAL_ENQUIRY">General Enquiry</option>
+                                <option value="NEW_CONNECTION">New Connection</option>
+                                <option value="REPAIR_SERVICE">Repair / Service</option>
+                                <option value="BUSINESS">Business Related</option>
+                             </select>
+                             <label for="subject">Subject</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea formControlName="message" class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 175px"></textarea>
+                                <p class="text-danger mt-2" *ngIf="isSubmitted && getControl('message').invalid" >this field is mandatory</p>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" (click)="onSubmit()">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="row m-0">
+                    <div class="col-12 margin_mobile p-0">
+                        <div class="d-inline-flex rounded bg-white w-100 p-4">
+                            <i class="fas fa-map-marker-alt fa-2x text-secondary me-4"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p class="mb-0">#22, Praksh Nagar Main Road, Nemilicherry, Tiruvallur-602024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-xl-6 margin_mobile p-0">
+                        <div class="d-inline-flex rounded bg-white w-100 p-4">
+                            <i class="fas fa-envelope fa-2x text-secondary me-4"></i>
+                            <div>
+                                <h4>Mail Us</h4>
+                                <p class="mb-0">sswaterpurifier07@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-xl-6 margin_mobile p-0">
+                        <div class="d-inline-flex rounded bg-white w-100 p-4">
+                            <i class="fas fa-phone fa-2x text-secondary me-4"></i>
+                            <div>
+                                <h4>Telephone</h4>
+                                <p class="mb-0">+91 9884883171</p>
+                                <p class="mb-0">+91 8122229436</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 margin_mobile p-0">
+                        <div class="h-75 overflow-hidden map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124378.49657445043!2d80.15469423595486!3d13.04661670306102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526565b9598ec7%3A0x2c98b9bb9d5cd319!2sSS%20WATER%20PURIFIER!5e0!3m2!1sen!2sin!4v1764326919472!5m2!1sen!2sin" width="600" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

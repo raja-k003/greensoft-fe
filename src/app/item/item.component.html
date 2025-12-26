@@ -1,0 +1,148 @@
+<div class="detail-container">
+    <div class="product-detail">
+        <div class="product-images">
+            <img [src]="mainImage" alt="Main Product Image" class="main-image">
+            <div class="thumbnail-images">
+                <ng-container *ngFor="let image of product.subUrls; let i = index">
+                    <img [src]="image" alt="Thumbnail" *ngIf="i < 7" (click)="onViewImage(image)">
+                </ng-container>
+            </div>
+        </div>
+        <div class="product-info">
+            <div class="">
+                <h2 class="product-title">{{ getProductName(product.name) | titlecase}}</h2>
+
+
+                <div class="d-flex align-items-center mb-2">
+                    <span class="text-warning mr-3">★★★★★</span>
+                    <span class="review-count"> (7 Reviews)</span>
+                </div>
+
+
+                <div class="price-section mb-3">
+                    <span class="price text-danger">₹ {{ product.offerPrice }}</span>
+                    <span class="old-price text-muted ml-2"><del>₹ {{ product.rawPrice }}</del></span>
+                    <span class="badge badge-danger ml-2">On sale</span>
+                </div>
+
+
+                <div class="mb-3">
+                    <div class="description">
+                        {{ 'Description' }}
+                    </div>
+                    <div class="faq-answer">
+                        <span>{{product.description}}</span>
+                    </div>
+                </div>
+
+                <ng-container>
+                    <div ngbAccordion class="mb-4 custom-accordion" *ngIf="product.specification && product.specification.length > 0">
+                        <div ngbAccordionItem [collapsed]="false">
+                            <h2 ngbAccordionHeader>
+                                <button ngbAccordionButton>
+                                    <span>Specification</span>
+                                </button>
+                            </h2>
+                            <div ngbAccordionCollapse>
+                                <div ngbAccordionBody>
+                                    <ng-template>
+                                        <table>
+                                            <ng-container *ngFor="let item of product.specification">
+                                                <tr>
+                                                    <td class="spec-key fw-bold">{{item.key}}</td>
+                                                    <td class="spec-value">{{item.value}}</td>
+                                                </tr>
+                                            </ng-container>
+                                        </table>
+                                    </ng-template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ngbAccordion class="mb-4 custom-accordion" 
+                        *ngIf="product.features && product.features.length > 0">
+                        <div ngbAccordionItem [collapsed]="!(product.specification) || (product.specification.length == 0) ? false : true">
+                            <h2 ngbAccordionHeader>
+                                <button ngbAccordionButton>
+                                    <span>Features</span>
+                                </button>
+                            </h2>
+                            <div ngbAccordionCollapse>
+                                <div ngbAccordionBody>
+                                    <ng-template>
+                                        <div class="faq-container">
+                                            <div class="faq-item" *ngFor="let faq of product.features">
+                                                <div class="faq-answer">
+                                                    {{ faq }}
+                                                </div>
+                                                <!-- <div class="faq-answer">
+                                                    <span>{{faq.desc}}</span>
+                                                </div> -->
+                                                <hr />
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="col-12 related-products" *ngIf="relatedProducts.length > 0">
+            <h2>Related Products</h2>
+            <div class="product mb-4" *ngFor="let item of relatedProducts" (click)="setMainProduct(item)">
+                <img src="assets/products/{{item.images[0]}}" alt="Product 1" class="relatedProductImg">
+                <p>{{item.name}}</p>
+                <p>{{item.price.offer}}.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+<app-shopping></app-shopping>
+<ng-template #CALLME>
+    <div class="model-inner">
+        <div class="">
+            <div class="row m-0">
+                <div class="row col-md-6 m-0 p-0">
+                    <h5 class="modal-title font-m font-weight-bold" id="exampleModalLabel">Request Product Info
+                    </h5>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <hr class=" hr-line">
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-12 col-xl-12">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="firstname" [formControl]="name"
+                            placeholder="Your Name">
+                        <p *ngIf="isSubmit && name.invalid" class="text-danger mt-2">this field is mandatory</p>
+                        <label for="firstname">Customer Name</label>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xl-12">
+                    <div class="form-floating">
+                        <input type="phone" class="form-control" id="phone" placeholder="Phone"
+                            [formControl]="contactNo">
+                        <p *ngIf="isSubmit && contactNo.hasError('required')" class="text-danger mt-2">this
+                            field is
+                            mandatory</p>
+                        <p *ngIf="isSubmit && contactNo.hasError('pattern')" class="text-danger mt-2">Invalid
+                            phone No
+                        </p>
+                        <label for="phone">Your Phone</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12 p-0">
+                <hr class=" hr-line">
+            </div>
+            <div class="col-md-12 d-flex justify-content-end p-0">
+                <button type="button" (click)="closeDialog()" class="btn call-me close">Close</button>
+                <button type="button" (click)="onSubmit()" class="btn call-me close">Submit</button>
+            </div>
+        </div>
+    </div>
+</ng-template>

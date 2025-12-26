@@ -1,0 +1,111 @@
+@import '../../variables.scss';
+
+// :root{--bs-blue: #0d6efd;
+// --bs-indigo: #6610f2;
+// --bs-purple: #6f42c1;
+// --bs-pink: #d63384;
+// --bs-red: #dc3545;
+// --bs-orange: #fd7e14;
+// --bs-yellow: #ffc107;
+// --bs-green: #198754;
+// --bs-teal: #20c997;
+// --bs-cyan: #0dcaf0;
+// --bs-white: #fff;
+// --bs-gray: #6c757d;
+// --bs-gray-dark: #343a40;
+// --bs-primary: $primary-color;
+// --bs-secondary: $secondary-color;
+// --bs-success: #198754;
+// --bs-info: #0dcaf0;
+// --bs-warning: #ffc107;
+// --bs-danger: #dc3545;
+// --bs-light: #F2F9F9;
+// --bs-dark: #001442;
+// --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+// --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+// }
+// // font-family: "Open Sans",sans-serif;
+// // font-size: 1rem;
+// // font-weight: 400;
+// // line-height: 1.5;
+// // color: gray;
+// // -webkit-text-size-adjust: 100%;
+// // -webkit-tap-highlight-color: rgba(0,0,0,0);
+// // box-sizing: border-box;
+// // width: 100%;
+// // padding-right: var(--bs-gutter-x, 0.75rem);
+// // padding-left: var(--bs-gutter-x, 0.75rem);
+// // margin-right: auto;
+// // margin-left: auto;
+// // padding-top: 3rem !important;
+// // padding-bottom: 3rem !important;
+// // background-color: #f2f9f9 !important;
+
+
+.connect{
+    color: $primary-color !important;
+    font-size: 1.5rem;
+}
+.message{
+    font-size: 4rem;
+    color: #001442;
+    text-transform: capitalize !important;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.text-para{
+    color: gray;
+       color: #001442;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.bg-light{
+    background-color: #f2f9f9 !important;
+}
+.form-floating label{
+    color: grey;
+}
+.btn-primary:hover{
+    background-color:#001442;
+    border: 1px solid #001442;
+}
+.btn-primary{
+    background-color: $primary-color;
+    border-radius: 10px;
+    border: 1px solid $primary-color;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: .5s;
+}
+.text-secondary {
+    color: $secondary-color !important;
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    font-weight: 500;
+    line-height: 1.2;
+    color: #001442;
+}
+p{
+    color: gray;
+}
+.map{
+    border-radius:16px;
+}
+.contact-text{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 3.5rem;
+}
+.fa-phone-alt:before {
+    content: "\f879";
+}
+.contact-bg{
+    background: #dfdfdf9e;
+    padding: 24px;
+    border-radius: 50px;
+}

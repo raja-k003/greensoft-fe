@@ -1,0 +1,205 @@
+<ng-template #CARDS>
+  <div class="section-wrapper text-center py-5">
+    <h2 class="section-title mb-3">Achieve Serenity With Natural Power</h2>
+    <p class="section-subtitle mb-5">
+      Our home planetarium projector uses real starry visuals to help you relax, cope with stress and improve sleep
+      quality.
+    </p>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-4 mb-4" *ngFor="let item of benefits">
+        <div class="benefit-card p-0">
+          <img [src]="item.image" [alt]="item.title" class="img-fluid benefit-img" />
+          <h4 class="benefit-title mt-3">{{ item.title }}</h4>
+          <p class="benefit-text">{{ item.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #REVIEW>
+  <div class="reviews-section container mar mt-5">
+    <h2 class="text-center font-weight-bold name mb-2">Our customers love us</h2>
+    <p class="text-center text-muted mb-5">4.9 star Based on 124 reviews</p>
+
+    <div class="carousel-container">
+
+      <button class="nav-btn" (click)="prev()">‹</button>
+
+      <div class="carousel-window">
+        <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * (100 / cardsPerView) + '%)'">
+          <div class="review-card-wrapper" *ngFor="let review of reviews">
+            <div class="review-card p-3 shadow-sm rounded-lg h-100">
+
+              <div class="review-image-wrapper mb-3 text-center">
+                <img [src]="review.image" class="img-fluid rounded-circle" />
+              </div>
+
+              <div class="star-rating text-center mb-2">
+                <span *ngFor="let s of [1,2,3,4,5]">⭐</span>
+              </div>
+
+              <h5 class="text-center font-weight-bold name mb-1">
+                {{ review.name }}
+              </h5>
+
+              <p class="text-center text-muted small">{{ review.text }}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="nav-btn" (click)="next()">›</button>
+
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #FEATURES>
+  <div class="features-wrapper py-5">
+    <div class="row justify-content-center">
+      <div class="col-6 col-md-3 col-lg-2 text-center mb-4" *ngFor="let item of features">
+        <img [src]="item.icon" class="img-fluid feature-icon filter" alt="feature-icon">
+        <p class="feature-title mt-2">{{ item.title }}</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #BENEFITS>
+  <div class="col-sm-12 col-md-12 feature-grid">
+    <div class="product-caption text-center">Why Green Soft ?</div>
+    <p class="section-subtitle mb-5">
+      Green Soft stands out for its proven expertise, delivering industrial water treatment solutions backed by 10+ years of real-world experience. We engineer systems that provide consistent water quality, reduce maintenance, and maximize equipment life. Our team focuses on reliability, transparency, and long-term service support, ensuring smooth operations for every client. We use advanced technologies tailored to your industry’s specific water challenges. With Green Soft, you get trusted performance, measurable results, and a partner committed to your success.
+    </p>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 mb-5">
+        <img src="assets/other/domestic.jpg" alt="Feature Image" class="feature_image res_height" />
+
+      </div>
+      <div class="col-sm-12  col-md-6 mb-5">
+        <div class="item">
+          <h2>For Home Supply </h2>
+          <div>
+<div class="mb-2">&#10003; Save money on cleaning products.</div>
+<div class="mb-2">&#10003; Improve the efficiency of your water heater.</div>
+<div class="mb-2">&#10003; Help treat skin conditions.</div>
+<div class="mb-2">&#10003; No more bad hair days.</div>
+<div class="mb-2">&#10003; Reduce cleaning time.</div>
+<div class="mb-2">&#10003; Cleaner laundry, dishes, and silverware.</div>
+<div class="mb-2">&#10003; Tastier food and drink.</div>
+<div class="mb-2">&#10003; Protect your appliances like geyser, dishwasher, and washing machine.</div>
+<div class="mb-2">&#10003; Luxurious baths and showers.</div>
+<div class="mb-2">&#10003; Streak-free car washes.</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- SECOND ROW -->
+    <div class="row">
+      <div class="col-sm-12 col-md-6 mb-5">
+        <div class="item">
+          <h2>For Commercial Use</h2>
+          <div>
+<div class="mb-2">&#10003; Lower chemical consumption and costs.</div>
+<div class="mb-2">&#10003; Improved consistency in water quality.</div>
+<div class="mb-2">&#10003; Reduced repair and maintenance costs.</div>
+<div class="mb-2">&#10003; Improved energy efficiency.</div>
+<div class="mb-2">&#10003; Lesser pipeline maintenance.</div>
+<div class="mb-2">&#10003; Enhanced product quality.</div>
+<div class="mb-2">&#10003; Optimises employees time and comfort.</div>
+<div class="mb-2">&#10003; Increased equipment/appliance life.</div>
+<div class="mb-2">&#10003; Improved boiler efficiency.</div>
+<div class="mb-2">&#10003; Helps maintain sustainability.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-5">
+        <img src="assets/other/commercial.jpg" alt="Gift Box Image" class="feature_image second_img" />
+
+      </div>
+
+    </div>
+
+  </div>
+</ng-template>
+
+<ng-template #CLIENTS>
+
+  <div class="featured-container">
+    <h2 class="title mb-5">Our Clients </h2>
+    <div class="logo-row">
+      <img *ngFor="let logo of logos" [src]="logo.src" [alt]="logo.alt" class="logo-img" />
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #BLOG>
+  <div class="blog-section">
+    <h2 class="section-title text-center mb-5">Blog posts</h2>
+
+    <div class="blog-grid">
+      <div class="blog-card" *ngFor="let post of blogPosts">
+        <div class="image-box">
+          <img [src]="post.image" alt="blog-image" />
+          <span class="tag">{{ post.tag }}</span>
+        </div>
+
+        <h3 class="title">{{ post.title }}</h3>
+
+        <p class="desc">
+          {{ post.description }}
+        </p>
+
+        <div class="meta">
+          <i class="fa-regular fa-calendar"></i>
+          <span>{{ post.date }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #PROJECTS>
+  <div class="relax-wrapper">
+    <h2 class="main-title">Our Projects Perfected</h2>
+    <p class="sub-title">
+At Green Soft, every project is engineered with precision, technical excellence, and industry-focused expertise.we have successfully delivered reliable water purification systems for factories, commercial facilities, and large industrial plants. Each installation is customized to meet the client’s water quality needs, ensuring optimal performance and long-term efficiency
+    </p>
+    <div class="row">
+      <div class="col-12">
+        <div class="cards-scroll">
+          <div class="cards">
+            <div class="card br25" *ngFor="let item of projects">
+              <div class="media-container">
+                <video [src]="item.src" muted controls *ngIf="item.type == 'video'"></video>
+                <img [src]="item.src" *ngIf="item.type == 'image'" class="carousel_img"
+                  (click)="onViewImg(img,item.src)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ng-template>
+
+
+<ng-container *ngIf="content == 'FEATURES'" [ngTemplateOutlet]="FEATURES"></ng-container>
+<ng-container *ngIf="content == 'BENEFITS'" [ngTemplateOutlet]="BENEFITS"></ng-container>
+<ng-container *ngIf="content  == 'REVIEW' " [ngTemplateOutlet]="REVIEW"></ng-container>
+<ng-container *ngIf="content  == 'CLIENTS' " [ngTemplateOutlet]="CLIENTS"></ng-container>
+<ng-container *ngIf="content  == 'BLOG' " [ngTemplateOutlet]="BLOG"></ng-container>
+<ng-container *ngIf="content  == 'PROJECTS' " [ngTemplateOutlet]="PROJECTS"></ng-container>
+
+<ng-template #img>
+  <img [src]="choosenImage" alt="" style="height: 100%;width: 100%;">
+</ng-template>

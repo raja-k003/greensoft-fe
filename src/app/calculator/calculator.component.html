@@ -1,0 +1,359 @@
+<div class="col-12 contact-bg">
+    <!-- <h4 class="text-white display-4 mb-4 contact-text">Contact Us</h4>
+    <img src="assets/common/contactus_1.jpg" alt="" class="w-100"> -->
+</div>
+
+<div class="container-fluid contact bg-light py-2">
+    <div class="container py-3 top_space">
+        <div class="row g-5">
+            <div class="col-lg-6 h-100 wow fadeInUp contact-bg" data-wow-delay="0.2s" style="
+          visibility: visible;
+          animation-delay: 0.2s;
+          animation-name: fadeInUp;
+        ">
+                <ul ngbNav #nav="ngbNav" class="nav-tabs">
+                    <li ngbNavItem>
+                        <button ngbNavLink (click)="onChange('WATER_SOFTNER_TEST')">
+                            WS Chemistry
+                        </button>
+                        <ng-template ngbNavContent>
+                            <ng-container *ngIf="type == 'WATER_SOFTNER_TEST'">
+                                <div class="text-center mx-auto pb-5" style="max-width: 800px">
+                                    <h4 class="text-uppercase text-primary connect"></h4>
+                                    <h3 class="display-3 text-capitalize mb-3 message">
+                                        Calculate Water Softening Chemistry
+                                    </h3>
+                                    <p class="mb-0 text-para">
+                                        Calculate the required water softening chemistry using resin quantity (litres) and incoming water hardness (PPM).
+Determine optimal salt dosage and regeneration cycles to ensure efficient hardness removal and consistent soft water output.
+                                    </p>
+                                </div>
+                                <form [formGroup]="form1">
+                                    <div class="row g-4">
+                                        <div class="col-lg-12 col-xl-12">
+                                            <label for="">Resin Quantity (Litres)</label>
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control border-0" id="resinQuantity"
+                                                    formControlName="resinQuantity"
+                                                    placeholder="Enter Resin Quantity" />
+                                                <p *ngIf="
+                            isSubmitted &&
+                            getControl(form1, 'resinQuantity').invalid
+                          " class="text-danger mt-2">
+                                                    this field is mandatory
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-xl-12">
+                                            <label for="">Water Hardness (PPM)</label>
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control border-0" id="waterHardness"
+                                                    formControlName="waterHardness" placeholder="Your Water Hardness" />
+                                                <p *ngIf="
+                            isSubmitted &&
+                            getControl(form1, 'waterHardness').invalid
+                          " class="text-danger mt-2">
+                                                    this field is mandatory
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3" (click)="onSubmit()">
+                                                Calculate
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </ng-container>
+                        </ng-template>
+                    </li>
+                    <li ngbNavItem>
+                        <button ngbNavLink (click)="onChange('WATER_SOFTNER_TEST1')">
+                            WS Size
+                        </button>
+                        <ng-template ngbNavContent>
+                            <ng-container *ngIf="type == 'WATER_SOFTNER_TEST1'">
+                                <div class="text-center mx-auto pb-5" style="max-width: 800px">
+                                    <h4 class="text-uppercase text-primary connect"></h4>
+                                    <h3 class="display-3 text-capitalize mb-3 message">
+                                        Identify Required Water Softener Size
+                                    </h3>
+                                    <p class="mb-0 text-para">
+                                        Identify the correct water softener size by evaluating daily water use (litres), water hardness (PPM), and desired regeneration frequency (days).
+Calculate the ideal system capacity to ensure continuous soft water production and efficient long-term performance.
+                                    </p>
+                                </div>
+                                <form [formGroup]="form2">
+                                    <div class="row g-4">
+                                        <div class="col-lg-12 col-xl-12">
+                                            <label for="">Daily Water Use (Litres)</label>
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control border-0" id="dailyWaterUse"
+                                                    formControlName="dailyWaterUse"
+                                                    placeholder="Enter Daily Water Use Quantity" />
+                                                <p *ngIf="
+                            isSubmitted &&
+                            getControl(form2, 'dailyWaterUse').invalid
+                          " class="text-danger mt-2">
+                                                    this field is mandatory
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-xl-12">
+                                            <label for="">Water Hardness (PPM)</label>
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control border-0" id="waterHardnessPPm"
+                                                    formControlName="waterHardnessPPm"
+                                                    placeholder="Your Water Hardness PPM" />
+                                                <p *ngIf="
+                            isSubmitted &&
+                            getControl(form2, 'waterHardnessPPm').invalid
+                          " class="text-danger mt-2">
+                                                    this field is mandatory
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-xl-12">
+                                            <label for="">Required Regeneration Frequency (Days)</label>
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control border-0"
+                                                    id="regenerationFrequency" formControlName="regenerationFrequency"
+                                                    placeholder="Your Regeneration Frequency" />
+                                                <p *ngIf="
+                            isSubmitted &&
+                            getControl(form2, 'regenerationFrequency').invalid
+                          " class="text-danger mt-2">
+                                                    this field is mandatory
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3" (click)="onSubmit()">
+                                                Calculate
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </ng-container>
+                        </ng-template>
+                    </li>
+                    <li ngbNavItem>
+                        <button ngbNavLink (click)="onChange('WATER_SOFTNER_TEST2')">
+                           Softner Mvp
+                        </button>
+                        <ng-template ngbNavContent>
+                            <ng-container *ngIf="type == 'WATER_SOFTNER_TEST2'">
+                                <div class="text-center mx-auto pb-5" style="max-width: 800px">
+                                    <h4 class="text-uppercase text-primary connect"></h4>
+                                    <h3 class="display-3 text-capitalize mb-3 message">
+                                        Calculate Softener MPV Settings & Variables
+                                    </h3>
+                                    <p class="mb-0 text-para">
+                                        Configure unit-of-water parameters, control mode, and signal output mode for optimal softener performance.
+Ensure precise regeneration timing and consistent soft water delivery tailored to system capacity and usage patterns.
+                                    </p>
+                                </div>
+                                <form [formGroup]="form3">
+                                    <div class="row g-4">
+                                        <div class="col-lg-12 col-xl-12">
+                                            <label for="">Resin Quantity (Litres)</label>
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control border-0" id="resinQuantity"
+                                                    formControlName="resinQuantity"
+                                                    placeholder="Enter Resin Quantity" />
+                                                <p *ngIf="
+                            isSubmitted &&
+                            getControl(form3, 'resinQuantity').invalid
+                          " class="text-danger mt-2">
+                                                    this field is mandatory
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-xl-12">
+                                            <label for="">Water Hardness (PPM)</label>
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control border-0" id="waterHardness"
+                                                    formControlName="waterHardness" placeholder="Your Water Hardness" />
+                                                <p *ngIf="
+                            isSubmitted &&
+                            getControl(form3, 'waterHardness').invalid
+                          " class="text-danger mt-2">
+                                                    this field is mandatory
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-6">
+                                            <label for="">Max Regeneration Days</label>
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control border-0" id="regenDays"
+                                                    formControlName="regenDays" placeholder="Enter Max Regen Days" />
+                                                <p *ngIf="
+                            isSubmitted &&
+                            getControl(form3, 'regenDays').invalid
+                          " class="text-danger mt-2">
+                                                    this field is mandatory
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-6">
+                                            <label for="subject">Unit of Water</label>
+                                            <div class="form-floating">
+                                                <select class="form-control border-0 form-input select"
+                                                    formControlName="waterUnit">
+                                                    <option value="M³">M³</option>
+                                                    <option value="Gallons">Gallons</option>
+                                                    <option value="Litres">Litres</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-6">
+                                            <label for="subject">Control Mode</label>
+                                            <div class="form-floating">
+                                                <select class="form-control border-0 form-input select"
+                                                    formControlName="controlMode">
+                                                    <option value="Meter Delayed">Meter Delayed</option>
+                                                    <option value="Meter Immediate">Meter Immediate</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-xl-6">
+                                            <label for="subject">Signal Output Mode</label>
+                                            <div class="form-floating">
+                                                <select class="form-control border-0 form-input select"
+                                                    formControlName="signalMode">
+                                                    <option value="Regeneration Only">Regeneration Only</option>
+                                                    <option value="Interval Only">Interval Only</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3" (click)="onSubmit()">
+                                                Calculate
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </ng-container>
+                        </ng-template>
+                    </li>
+                </ul>
+                <div [ngbNavOutlet]="nav"></div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s" style="
+          visibility: visible;
+          animation-delay: 0.4s;
+          animation-name: fadeInUp;
+        ">
+                <div class="row g-4">
+                    <ng-container *ngIf="type == 'WATER_SOFTNER_TEST' && isResult">
+                        <div class="col-12">
+                            <div class="d-inline-flex rounded bg-white w-100 p-4">
+                                <div>
+                                    <h4>
+                                        Output Between Regeneration :
+                                        <span style="color: red">{{ result.obrResult }}</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="d-inline-flex rounded bg-white w-100 p-4">
+                                <div>
+                                    <h4>
+                                        Salt Required Per Regeneration :
+                                        <span style="color: red">{{ result.saltResult }}</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="d-inline-flex rounded bg-white w-100 p-4">
+                                <div>
+                                    <h4>
+                                        Water Required For Brine :<span style="color: red">{{
+                                            result.waterResult
+                                            }}</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="type == 'WATER_SOFTNER_TEST1' && isResult">
+                        <div class="col-12">
+                            <div class="d-inline-flex rounded bg-white w-100 p-4">
+                                <div>
+                                    <h4 *ngIf="result.resinQuantityResult">
+                                        Required Resin Quantity :
+                                        <span style="color: red">{{
+                                            result.resinQuantityResult
+                                            }}</span>
+                                    </h4>
+                                    <p *ngIf="result.regenerationIntervalResult">
+                                        As per industry experts, regeneration should occur
+                                        <span style="color: red">{{
+                                            result.regenerationIntervalResult
+                                            }}</span>
+                                        days for getting resins best health and optimized water
+                                        wastage that is used during regeneration. Frequent
+                                        regeneration hampers resins mechanical strength and leads to
+                                        early replacement or top-up of resin bed. Avoid choosing a
+                                        water softener with very less resin quantity as it increases
+                                        frequency of regeneration cycle.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="type == 'WATER_SOFTNER_TEST2' && isResult">
+                        <div class="col-12">
+                            <div class="d-inline-flex rounded bg-white w-100 p-4">
+                                <div class="">
+                                    <h4>
+                                        <div>Backwash : <span style="color: red">{{ result.backwash1 }}</span></div>
+                                    </h4>
+                                    <h4>
+                                        <div>Brine Draw : <span style="color: red">{{ result.brineDraw1 }}</span></div>
+                                    </h4>
+                                    <h4>
+                                        <div>Brine Refill & Slow Wash : <span style="color: red">{{ result.brineRefill1 }}</span></div>
+                                    </h4>
+                                    <h4>
+                                        <div>Fast Rinse : <span style="color: red">{{ result.fastRinse1 }}</span></div>
+                                    </h4>
+                                    <h4>
+                                        <div>OBR : <span style="color: red">{{ result.obr }}</span></div>
+                                    </h4>
+                                                                        <h4>
+                                        <div>Regen Days : <span style="color: red">{{ result.regenInterval1 }}</span></div>
+                                    </h4>
+                                    <h4>
+                                        <div><span style="color: red">{{ form3.get("waterUnit").value == 'Litres'? 'HU-03': form1.get("waterUnit").value == 'Gallons' ?  'HU-02':'HU-01' }}</span></div>
+                                    </h4>
+                                    <h4>
+                                        <div><span style="color: red">{{ form3.get("controlMode").value == 'Meter Delayed' ? 'A-01' : 'A-02' }}</span></div>
+                                    </h4>
+                                    <h4>
+                                        <div><span style="color: red">{{ form3.get("signalMode").value == 'Interval Only' ? 'b-02':'b-01' }}</span></div>
+                                    </h4>                      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="d-inline-flex rounded bg-white w-100 p-4">
+                                <div>
+<p>
+                            The results displayed are completely based on the on-ground experience of Purity Hub. Actual settings might change based on multiports brand, multiports size, input water pressure, resin bed quality, products installation quality, input water turbidity &amp; other factors too.
+                            Purity Hub doesn't take any responsibility for any product damage and doesn't guarantee results based on the settings displayed above as Purity Hub is unaware of the products quality used in your water softener for which you are calculating the settings &amp; variables.
+                            Please contact your service provider or Purity Hub before making any setting changes in your water softener.
+                        </p>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+@import './variables.scss';
+
+
+
+.text-primary{
+    color: $primary-color !important;
+}
+.top_space{
+    margin-top: 100px;
+}
+.home_space{
+    margin-top:81px;
+    height: 480px;
+}
+:root {
+  font-family: "Poppins", sans-serif !important;
+}
+
+body, .mat-typography, .mat-button, .mat-input-element, .mat-form-field {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/***media query starts here***/
+
+@media (max-width: 600px) {
+  .feature-grid{
+    margin-top: 60px !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+.feature_image{
+           width: 100% !important;
+        height: 100% !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+.relax-wrapper{
+    padding: 50px 15px !important;
+}
+.blog-section{
+  padding:0px !important;
+}
+.top_space_mobile{
+  margin-top:0px !important;
+}
+.top_space_mobile_contact{
+  margin-top:45px !important;
+}
+.mobile_bottom{
+  margin-bottom:0px !important;
+  margin-top: 15px !important; 
+}
+.contact-bg{
+  border-radius:20px;
+}
+.margin_mobile{
+  margin-top:10px;
+}
+.modal-dialog{
+    position: fixed !important;
+    bottom: 0px !important;
+    width: 97% !important;
+}
+.card{
+      padding: 10px;
+}
+.card-img-top{
+  width: 210px !important;
+  height: 210px !important;
+  margin: 24px auto !important;
+  display: block !important;
+}
+h5.card-title.font-weight-bold.text-dark {
+    font-size: 14px !important;
+    line-height: 19px !important;
+}
+.thumbnail-images{
+  overflow-y:scroll;
+}
+.product-detail{
+    margin-top: 109px;
+    margin-left:0px !important;
+}
+
+.detail-container{
+  padding:0px !important;
+}
+.product-info{
+  padding-left: 5px !important;
+}
+.card_design{
+  border-radius: 6px !important;
+}
+.badge_design{
+  top: 0px !important;
+  left: 5px !important;
+}
+}
+.badge_design{
+  top: 16px ; 
+  left: 24px;
+}
+.mob-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

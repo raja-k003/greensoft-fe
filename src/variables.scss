@@ -1,0 +1,81 @@
+
+// $light-color:#fff;
+// $smallest-font:10px;
+// $small-font:12px;
+// $medium-font:14px;
+// $bigger-font:16px;
+// $biggest-font:18px;
+// $primary_radius:6px;
+// $secondary_radius:10px;
+// $secondary_shadow:  0 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+// :root{
+//     --toaster-danger:#ff6767;
+//     --light-color:#fff;
+// }
+// @mixin primary-gradient{
+//     background: linear-gradient(270deg, $light-color, $primary-color);
+// }
+// @mixin secondary-gradient{
+//     background: linear-gradient(270deg, $light-color, $secondary-color);
+// }
+// @mixin primary-box-shadow{
+// box-shadow: rgb(244, 245, 247) 0rem 0.25rem 1.25rem 0rem, $primary-color 0rem 0.4375rem 0.625rem -0.3125rem;
+// }
+
+// @mixin secondary-box-shadow{
+// box-shadow: rgb(244, 245, 247) 0rem 0.25rem 1.25rem 0rem, $secondary-color 0rem 0.4375rem 0.625rem -0.3125rem;
+// }
+
+// $primary_margin_bottom:10px;
+// $translateRatio: 1;
+// $ptPxRatio: 0.75;
+
+// @function ptToPx($fontSize) {
+//     $modifiedFontSize: $fontSize * $ptPxRatio * $translateRatio;
+//     @return $modifiedFontSize * 1px;
+// }
+// .style {
+    // COMMON
+    // $primary-color:var(--primary-color);
+    // $secondary-color:var(--secondary-color);
+    // $body-bg-color:var(--body-bg-color);
+    // $primary-font-color:var(--primary-font-color);
+    // $secondary-font-color:var(--secondary-font-color);
+    // $font-family:var(--font-family);
+    // $light-color:var(--light-color);
+    // $dark-color:var(--dark-color);
+    // $border-color:var(--border-color);
+    // LAYOUT
+    // $topnav-bg-color:var(--topnav-bg-color);
+    // $sidenav-bg-color:var(--sidenav-bg-color);
+   
+
+    // BUTTON
+    // $btn-font-color:var(--btn-font-color);
+    // $btn-bg-color:var(--btn-bg-color);
+
+
+    // TABLE
+    // $table-bg-color:var(--table-bg-color);
+    // $table-border-color:var(table-border-color);
+    // $table-font-color:var(--table-font-color);
+    
+
+    //TOASTER
+    // $toaster-danger:var(--toaster-danger); 
+    // $toaster-success:var(--toaster-success);
+
+
+    // CARD
+    // $card-color:var(--card-color);
+    // $card-bg-color:var(--card-bg-color);
+    // $card-secondary-heading-font-size:var(--card-secondary-heading-font-size);
+    // $card-primary-heading-font-size:var(--card-primary-heading-font-size);
+
+// }
+
+
+$primary-color: #02294b ;
+$info-color: #ffffff;
+$secondary-color: #02294b;

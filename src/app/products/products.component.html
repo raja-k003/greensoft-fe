@@ -1,0 +1,63 @@
+
+<div class="container1">
+   <ng-container *ngFor="let item of category | keyvalue">
+  <div class="col-12 mb-5">
+    <!-- <div class="col-4"></div> -->
+ 
+    <div class="text-center">
+    <h2 class="font-weight-bold mb-2 product-caption">{{item.value['name']}}</h2>
+    <!-- <a href="#" class="font-weight-bold text-primary">View all →</a> -->
+    </div>
+ 
+    <!-- <div class="col-4"></div> -->
+  </div>
+
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-6 mb-4" *ngFor="let p of item.value['products'];let i = index">
+
+      <div class="card border-0 shadow-sm cursor-pointer card_design" (click)="onViewProducts(p,p.id)">
+
+        <div class="position-relative">
+
+          <span class="badge badge-danger position-absolute badge_design" style="top: 16px; left: 24px;">
+            {{ '20% Off' }}
+          </span>
+
+          <picture>
+            <source srcset="assets/images/{{p.name}}/img-1.png" media="(max-width: 480px)" />
+            <source srcset='assets/images/{{p.name}}/img-1.png' media="(max-width: 768px)" />
+            <source srcset='assets/images/{{p.name}}/img-1.png' media="(min-width: 769px)" />
+            <img 
+              src="assets/images/{{p.name}}/img-1.png"
+              class="card-img-top img-fluid rounded"
+              [alt]="p.name"
+              loading="lazy"
+            />
+          </picture>
+
+        </div>
+      </div>
+      <div class="card-body">
+          <h5 class="card-title font-weight-bold text-dark" style="min-height: 56px;">
+            {{ getProductName(p.name) | titlecase}}
+          </h5>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="small text-danger font-weight-bold">From</span>
+              <span class="text-danger font-weight-bold">
+                {{ p.offerPrice }}
+              </span>
+            </div>
+
+            <div *ngIf="p.rawPrice">
+              <span class="text-muted small" style="text-decoration: line-through;">
+                {{ p.rawPrice }}
+              </span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+   </ng-container>
+</div>

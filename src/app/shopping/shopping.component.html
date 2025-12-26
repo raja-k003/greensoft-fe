@@ -1,0 +1,14 @@
+<div class="container my-4">
+  <div class="row text-center justify-content-center feature-row">
+
+    <div class="col-6 col-md-3 mb-4" *ngFor="let item of features">
+      <img [src]="item.icon"
+           [srcset]="item.icon"
+           class="img-fluid feature-icon mb-2"
+           alt="feature icon" />
+
+      <p class="feature-text">{{ item.title }}</p>
+    </div>
+
+  </div>
+</div>

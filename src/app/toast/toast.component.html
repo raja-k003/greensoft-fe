@@ -1,0 +1,15 @@
+<ngb-toast *ngFor="let toast of toastService.toasts" [header]="toast.headertext" [class]="toast.classname"
+    [autohide]="toast.autohide" [delay]="toast.delay || 5000" (hide)="toastService.remove(toast)" (click)="toastService.remove(toast)">
+    <div class="row m-0">
+    <div class="col-md-10  d-flex justify-content-start p-0">
+    <ng-template [ngIf]="isTemplate(toast)" [ngIfElse]="text">
+        <ng-template [ngTemplateOutlet]="toast.textOrTpl"></ng-template>
+    </ng-template>
+
+    <ng-template #text><span class="text-caption"><img src="assets/toaster/{{toast.type}}.png" alt="" class="toaster-img mr-3"><span class="toastertext">{{ toast.textOrTpl }}</span></span></ng-template>
+</div>
+<div class="col-md-2  d-flex justify-content-end p-0">
+    <button type="button" aria-label="Close" class="toast-close p-0 m-0"><img src="assets/toaster/close.png" alt=""></button>
+</div>
+</div>
+</ngb-toast>

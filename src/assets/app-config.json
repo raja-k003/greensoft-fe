@@ -1,0 +1,9 @@
+{
+    "environment": {
+        "production": true,
+        "BASEURL": "https://sswaterpurifiers.in/",
+        "feature":{
+            "showFilter": true
+        }
+    }
+}

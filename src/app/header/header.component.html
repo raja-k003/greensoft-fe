@@ -1,0 +1,31 @@
+
+<div class="ad-banner" [class.fade-in]="animate">
+    <span class="slogan" [class.fade-in]="animate"> ⭐ {{slogan}} ⭐</span>
+</div>
+<nav class="navbar p-0">
+    <div class="col-12 navbar-container">
+         <div *ngIf="hideMenus"><img src="assets/other/menu.svg" class="menu-icon" alt="" (click)="onShowmenu(menu)"></div>
+         <ng-container *ngIf="!hideMenus">
+        <ul class="menu-items" #menuItems>
+            <li routerLink="/home"><a>Home</a></li>
+            <li routerLink="/product" ><a>Products</a></li>
+            <li routerLink="/about-us"><a>About Us</a></li>
+            <li routerLink="/contact"><a href="https://api.whatsapp.com/send/?phone=919884883171&text&type=phone_number&app_absent=0" target="_blank">Whatsapp Us</a></li>
+            <li routerLink="/contact"><a>Contact</a></li>
+        </ul>
+         </ng-container>
+        <a href="" class="navbar-brand p-0 d-flex">
+            <img src="assets/common/logo1.png" alt="" class="logo">
+            <div class="logo_text">green soft</div>
+        </a>
+    </div>
+</nav>
+<ng-template #menu>
+  <div class="card">
+    <div class="menu_link" (click)="onRoute('/home')">Home</div>
+        <div class="menu_link" (click)="onRoute('/product')">Products</div>
+            <div class="menu_link" (click)="onRoute('/about-us')">About Us</div>
+                <div class="menu_link" (click)="onRoute('/whatsapp')">Whatsapp Us</div>
+                    <div class="menu_link" (click)="onRoute('/contact')">Contact</div>
+  </div>
+</ng-template>
